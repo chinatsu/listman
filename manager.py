@@ -24,7 +24,7 @@ def moveItem(listView, mod):
     currentRow = listView.currentRow()
     currentItem = listView.takeItem(currentRow)
     listView.insertItem(currentRow+mod, currentItem)
-    listView.setCurrentRow(currentRow+mod)
+    listView.setCurrentRow(currentRow + mod)
 
 
 def saveList(listView):

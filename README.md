@@ -11,5 +11,6 @@ playlist manager to make my coworkers lives easier
 * delete files, only single selection atm.. kind of impractical, both with button and Delete hotkey
 * saves on exit, with a redundant save button as well
 
+
 ## todo
 * multi selection?
