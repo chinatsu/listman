@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 from PyQt5.QtCore import QRect, Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QListWidget, QGridLayout, QFileDialog, QStyle, QAbstractItemView, QShortcut
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QListWidget,
+                             QGridLayout, QFileDialog, QStyle,
+                             QAbstractItemView, QShortcut)
 import sys
 import atexit
 
