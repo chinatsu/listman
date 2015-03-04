@@ -25,7 +25,7 @@ def deleteItem(listView):
 def moveItem(listView, mod):
     currentRow = listView.currentRow()
     currentItem = listView.takeItem(currentRow)
-    listView.insertItem(currentRow+mod, currentItem)
+    listView.insertItem(currentRow + mod, currentItem)
     listView.setCurrentRow(currentRow + mod)
 
 
@@ -52,31 +52,23 @@ def main():
     screen = QWidget()
 
     # widgets
-    loadButton = QPushButton("&Open file", screen)
-    deleteButton = QPushButton("&Delete item", screen)
+    loadButton = QPushButton("&Add item", screen)
+    deleteButton = QPushButton("", screen)
     upButton = QPushButton("", screen)
     downButton = QPushButton("", screen)
-    saveButton = QPushButton("&Save", screen)
-    exitButton = QPushButton("&Quit", screen)
     listView = QListWidget(screen)
 
     # widget positions
     loadButton.setGeometry(QRect(10, 10, 100, 32))
-    deleteButton.setGeometry(QRect(120, 10, 100, 32))
-    upButton.setGeometry(QRect(230, 10, 32, 32))
-    downButton.setGeometry(QRect(272, 10, 32, 32))
-    saveButton.setGeometry(QRect(10, 460, 100, 32))
-    exitButton.setGeometry(QRect(120, 460, 100, 32))
-    listView.setGeometry(QRect(10, 50, 580, 400))
+    deleteButton.setGeometry(QRect(474, 10, 32, 32))
+    upButton.setGeometry(QRect(516, 10, 32, 32))
+    downButton.setGeometry(QRect(558, 10, 32, 32))
+    listView.setGeometry(QRect(10, 50, 580, 440))
 
     # button icons
+    deleteButton.setIcon(deleteButton.style().standardIcon(QStyle.SP_DialogDiscardButton))
     upButton.setIcon(upButton.style().standardIcon(QStyle.SP_ArrowUp))
     downButton.setIcon(downButton.style().standardIcon(QStyle.SP_ArrowDown))
-
-    # app layout
-    appLayout = QGridLayout()
-    appLayout.addWidget(loadButton)
-    appLayout.addWidget(saveButton)
 
     # events
     listView.setDragDropMode(QAbstractItemView.InternalMove)
@@ -84,8 +76,6 @@ def main():
     upButton.clicked.connect(lambda: moveItem(listView, -1))
     downButton.clicked.connect(lambda: moveItem(listView, +1))
     deleteButton.clicked.connect(lambda: deleteItem(listView))
-    saveButton.clicked.connect(lambda: saveList(listView))
-    exitButton.clicked.connect(lambda: exitApp(listView))
 
     # shortcuts
     delHotkey = QShortcut(listView)
