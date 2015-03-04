@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from PyQt5.QtCore import QRect, Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QListWidget, QGridLayout, QFileDialog, QStyle, QAbstractItemView, QShortcut
 import sys
 import atexit
 
 
+# change this
 playlist = '/home/china/playlist.m3u'
 
 
