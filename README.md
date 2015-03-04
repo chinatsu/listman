@@ -1,5 +1,5 @@
 # listman
-playlist manager to make my coworker's lives easier
+playlist manager to make my coworkers lives easier
 
 ## dependencies
 * Python 3
@@ -7,10 +7,9 @@ playlist manager to make my coworker's lives easier
 
 ## functions
 * it opens files and appends it to the playlist, there's no filter so any file can be added although the mediaplayer might not support it.
-* drag/drop reordering of files
-* delete files, only single selection atm.. kind of impractical
-* saves on exit
+* drag/drop reordering of files, as well as buttons to move up/down and Ctrl+Up/Down hotkeys
+* delete files, only single selection atm.. kind of impractical, both with button and Delete hotkey
+* saves on exit, with a redundant save button as well
 
 ## todo
-* move up/down buttons
 * multi selection?
