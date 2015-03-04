@@ -65,7 +65,7 @@ def main():
     downButton.setGeometry(QRect(272, 10, 32, 32))
     saveButton.setGeometry(QRect(10, 460, 100, 32))
     exitButton.setGeometry(QRect(120, 460, 100, 32))
-    listView.setGeometry(QRect(10, 50, 380, 400))
+    listView.setGeometry(QRect(10, 50, 580, 400))
 
     # button icons
     upButton.setIcon(upButton.style().standardIcon(QStyle.SP_ArrowUp))
@@ -100,7 +100,7 @@ def main():
 
     # screen setup
     screen.setWindowTitle('Playlist Manager')
-    screen.resize(400, 500)
+    screen.resize(600, 500)
     populateList(listView)
     screen.show()
     atexit.register(saveList, listView)
